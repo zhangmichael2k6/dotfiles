@@ -1,3 +1,5 @@
 [user]
 	name = Zhang Michael
 	email = zhangmichael2006@proton.me
+[credential]
+	helper = store
