@@ -4,7 +4,7 @@
 ## Credits
 Thanks to Mr. Takuya for borrowed some of his code\
 I really appreciate that !
-- [Link to Mr. Takuya Github repo](https://github.com/craftzdog/dotfiles-public)
+- [Link to Mr. Takuya dotfiles Github repo](https://github.com/craftzdog/dotfiles-public)
 - [Link to Mr. Takuya Youtube channel](https://www.youtube.com/c/devaslife)
 ## My setup
 I currently using Windows but I use ArchWSL to do my work. So I ensure that my config will work for any Linux distro
