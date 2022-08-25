@@ -35,4 +35,6 @@ packer.startup(function(use)
 	use 'dinhhuy258/git.nvim' -- For git blame & browse
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
+  use 'norcalli/nvim-colorizer.lua'
+  use 'folke/zen-mode.nvim'
 end)
