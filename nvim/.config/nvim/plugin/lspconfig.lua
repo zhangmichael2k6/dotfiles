@@ -85,6 +85,8 @@ nvim_lsp.sumneko_lua.setup {
 
 nvim_lsp.clangd.setup{}
 
+nvim_lsp.pyright.setup{}
+
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   vim.lsp.diagnostic.on_publish_diagnostics, {
   underline = true,

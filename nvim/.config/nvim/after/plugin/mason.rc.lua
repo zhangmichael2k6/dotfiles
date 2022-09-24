@@ -8,5 +8,5 @@ mason.setup({
 })
 
 lspconfig.setup {
-  ensure_installed = { "sumneko_lua", "clangd" },
+  ensure_installed = { "sumneko_lua", "clangd", "pyright" },
 }
