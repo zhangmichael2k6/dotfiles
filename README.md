@@ -14,3 +14,5 @@
 2. I already fixed and correct some of common error. So please, **DO NOT FUCKING CHANGE IT !!!**. If you blame me, i don't give the fuck what you say !
 
 # Peace ! :v:
+P/S: Just change the font name is ok!
+P/S: You can use Nerd Font !
