@@ -1,5 +1,6 @@
 # Dotfile
 
+## Note
 1.This is my personal dotfile.
 
 2.I stole 99.99% of the neovim config.
