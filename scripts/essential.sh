@@ -2,4 +2,8 @@
 
 sudo pacman -Syu
 
-sudo pacman -S base-devel neovim stow git curl fish
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+
+yay
+
+yay -S stow neovim git neofetch macchina 
