@@ -8,4 +8,4 @@ end
 alias vim="nvim"
 alias cls="clear"
 
-fish_config theme save "Catppuccin Frappe"
+fish_config theme choose "Catppuccin Frappe"
