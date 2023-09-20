@@ -1,0 +1,17 @@
+# My own keybind
+
+# Launch terminal the right way !
+super + return
+      kitty -e /usr/bin/fish
+
+# Launch steam
+super + shift + s
+      steam
+
+# Rofi shit
+ctrl + period
+     rofi -show emoji
+ctrl + shift + @space
+     rofi -show drun
+ctrl + q
+     rofi -show power-menu:rofi-power-menu
