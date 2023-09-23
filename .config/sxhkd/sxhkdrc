@@ -1,7 +1,7 @@
 # My own keybind
 
 # Launch terminal the right way !
-super + return
+super + Return
       kitty -e /usr/bin/fish
 
 # Launch steam
@@ -15,3 +15,11 @@ ctrl + shift + @space
      rofi -show drun
 ctrl + q
      rofi -show power-menu:rofi-power-menu
+
+# Volume control without the <XFAudio> shit !
+ctrl + Up
+     pactl set-sink-volume @DEFAULT_SINK@ +5%
+ctrl + Down 
+     pactl set-sink-volume @DEFAULT_SINK@ -5%
+ctrl + m
+     pactl set-sink-mute @DEFAULT_SINK@ toggle  

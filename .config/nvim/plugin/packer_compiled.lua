@@ -114,10 +114,10 @@ _G.packer_plugins = {
     path = "/home/ying/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  dracula = {
+  ["dracula.nvim"] = {
     loaded = true,
-    path = "/home/ying/.local/share/nvim/site/pack/packer/start/dracula",
-    url = "https://github.com/dracula/vim"
+    path = "/home/ying/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,

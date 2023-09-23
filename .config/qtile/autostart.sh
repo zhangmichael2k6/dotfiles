@@ -9,4 +9,3 @@ sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
 /usr/lib/geoclue-2.0/demos/agent & 
 redshift &
 redshift-gtk &
-~/.config/polybar/launch.sh

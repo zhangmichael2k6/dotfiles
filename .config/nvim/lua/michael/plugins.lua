@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   -- Colorscheme
-  use {'dracula/vim', as = 'dracula'}
+  use 'Mofiqul/dracula.nvim'
 
   -- Bullshit
   use {"nvim-lua/plenary.nvim"} 

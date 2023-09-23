@@ -1,29 +1,3 @@
-# Copyright (c) 2010 Aldo Cortesi
-# Copyright (c) 2010, 2014 dequis
-# Copyright (c) 2012 Randall Ma
-# Copyright (c) 2012-2014 Tycho Andersen
-# Copyright (c) 2012 Craig Barnes
-# Copyright (c) 2013 horsik
-# Copyright (c) 2013 Tao Sauvage
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-#
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-# SOFTWARE.
-
 import os
 import subprocess
 from libqtile import bar, extension, hook, layout, qtile, widget
@@ -37,8 +11,8 @@ import colors
 
 mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 myTerm = "kitty -e /usr/bin/fish"      # My terminal of choice
-myTerm1 = "kitty" 
-wm_bar = "polybar"
+myBrowser = "firefox" # My browser of choice
+myEmacs = "emacsclient -c -a 'emacs' " # The space at the end is IMPORTANT!
 
 # Allows you to input a name when adding treetab section.
 @lazy.layout.function
@@ -58,12 +32,10 @@ def minimize_all(qtile):
 keys = [
     # The essentials
     Key([mod], "Return", lazy.spawn(myTerm), desc="Terminal"),
-    Key([mod, "shift"], "Return", lazy.spawn("dm-run"), desc='Run Launcher'),
+    Key([mod], "b", lazy.spawn(myBrowser), desc='Web browser'),
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
-    Key([mod, "shift"], "q", lazy.spawn("dm-logout"), desc="Logout menu"),
-    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     
     # Switch between windows
     # Some layouts like 'monadtall' only need to use j/k to move
@@ -137,6 +109,7 @@ keys = [
     Key([mod], "period", lazy.next_screen(), desc='Move focus to next monitor'),
     Key([mod], "comma", lazy.prev_screen(), desc='Move focus to prev monitor'),
     
+
 ]
 groups = []
 group_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9",]
@@ -247,6 +220,192 @@ layouts = [
 
 # Some settings that I use on almost every widget, which saves us
 # from having to type these out for each individual widget.
+widget_defaults = dict(
+    font="Ubuntu Bold",
+    fontsize = 12,
+    padding = 0,
+    background=colors[0]
+)
+
+extension_defaults = widget_defaults.copy()
+
+
+def init_widgets_list():
+    widgets_list = [
+        widget.Image(
+                 filename = "~/.config/qtile/icons/logo.png",
+                 scale = "False",
+                 mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)},
+                 ),
+        widget.Prompt(
+                 font = "Ubuntu Mono",
+                 fontsize=14,
+                 foreground = colors[1]
+        ),
+        widget.GroupBox(
+                 fontsize = 11,
+                 margin_y = 3,
+                 margin_x = 4,
+                 padding_y = 2,
+                 padding_x = 3,
+                 borderwidth = 3,
+                 active = colors[8],
+                 inactive = colors[1],
+                 rounded = False,
+                 highlight_color = colors[2],
+                 highlight_method = "line",
+                 this_current_screen_border = colors[7],
+                 this_screen_border = colors [4],
+                 other_current_screen_border = colors[7],
+                 other_screen_border = colors[4],
+                 ),
+        widget.TextBox(
+                 text = '|',
+                 font = "Ubuntu Mono",
+                 foreground = colors[1],
+                 padding = 2,
+                 fontsize = 14
+                 ),
+        widget.CurrentLayoutIcon(
+                 # custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
+                 foreground = colors[1],
+                 padding = 0,
+                 scale = 0.7
+                 ),
+        widget.CurrentLayout(
+                 foreground = colors[1],
+                 padding = 5
+                 ),
+        widget.TextBox(
+                 text = '|',
+                 font = "Ubuntu Mono",
+                 foreground = colors[1],
+                 padding = 2,
+                 fontsize = 14
+                 ),
+        widget.WindowName(
+                 foreground = colors[6],
+                 max_chars = 40
+                 ),
+        widget.GenPollText(
+                 update_interval = 300,
+                 func = lambda: subprocess.check_output("printf $(uname -r)", shell=True, text=True),
+                 foreground = colors[3],
+                 fmt = '❤  {}',
+                 decorations=[
+                     BorderDecoration(
+                         colour = colors[3],
+                         border_width = [0, 0, 2, 0],
+                     )
+                 ],
+                 ),
+        widget.Spacer(length = 8),
+        widget.CPU(
+                 format = '  Cpu: {load_percent}%',
+                 foreground = colors[4],
+                 decorations=[
+                     BorderDecoration(
+                         colour = colors[4],
+                         border_width = [0, 0, 2, 0],
+                     )
+                 ],
+                 ),
+        widget.Spacer(length = 8),
+        widget.Memory(
+                 foreground = colors[8],
+                 mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
+                 format = '{MemUsed: .0f}{mm}',
+                 fmt = '🖥  Mem: {} used',
+                 decorations=[
+                     BorderDecoration(
+                         colour = colors[8],
+                         border_width = [0, 0, 2, 0],
+                     )
+                 ],
+                 ),
+        widget.Spacer(length = 8),
+        widget.DF(
+                 update_interval = 60,
+                 foreground = colors[5],
+                 mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e df')},
+                 partition = '/',
+                 #format = '[{p}] {uf}{m} ({r:.0f}%)',
+                 format = '{uf}{m} free',
+                 fmt = '🖴  Disk: {}',
+                 visible_on_warn = False,
+                 decorations=[
+                     BorderDecoration(
+                         colour = colors[5],
+                         border_width = [0, 0, 2, 0],
+                     )
+                 ],
+                 ),
+        widget.Spacer(length = 8),
+        widget.PulseVolume(
+                 foreground = colors[7],
+                 fmt = '🕫  Vol: {}',
+                 decorations=[
+                     BorderDecoration(
+                         colour = colors[7],
+                         border_width = [0, 0, 2, 0],
+                     )
+                 ],
+                 ),
+        widget.Spacer(length = 8),
+        widget.KeyboardLayout(
+                 foreground = colors[4],
+                 fmt = '⌨  Kbd: {}',
+                 decorations=[
+                     BorderDecoration(
+                         colour = colors[4],
+                         border_width = [0, 0, 2, 0],
+                     )
+                 ],
+                 ),
+        widget.Spacer(length = 8),
+        widget.Clock(
+                 foreground = colors[8],
+                 format = "⏱  %a, %b %d - %H:%M",
+                 decorations=[
+                     BorderDecoration(
+                         colour = colors[8],
+                         border_width = [0, 0, 2, 0],
+                     )
+                 ],
+                 ),
+        widget.Spacer(length = 8),
+        widget.Systray(padding = 3),
+        widget.Spacer(length = 8),
+
+        ]
+    return widgets_list
+
+# Monitor 1 will display ALL widgets in widgets_list. It is important that this
+# is the only monitor that displays all widgets because the systray widget will
+# crash if you try to run multiple instances of it.
+def init_widgets_screen1():
+    widgets_screen1 = init_widgets_list()
+    return widgets_screen1 
+
+# All other monitors' bars will display everything but widgets 22 (systray) and 23 (spacer).
+def init_widgets_screen2():
+    widgets_screen2 = init_widgets_list()
+    del widgets_screen2[22:24]
+    return widgets_screen2
+
+# For adding transparency to your bar, add (background="#00000000") to the "Screen" line(s)
+# For ex: Screen(top=bar.Bar(widgets=init_widgets_screen2(), background="#00000000", size=24)),
+
+def init_screens():
+    return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), size=26)),
+            Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=26)),
+            Screen(top=bar.Bar(widgets=init_widgets_screen2(), size=26))]
+
+if __name__ in ["config", "__main__"]:
+    screens = init_screens()
+    widgets_list = init_widgets_list()
+    widgets_screen1 = init_widgets_screen1()
+    widgets_screen2 = init_widgets_screen2()
 
 # Drag floating layouts.
 mouse = [
@@ -304,9 +463,6 @@ wl_input_rules = None
 def start_once():
     home = os.path.expanduser('~')
     subprocess.call([home + '/.config/qtile/autostart.sh'])
-@hook.subscribe.startup
-def startup():
-    bottom.show(False)
 
 # XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
 # string besides java UI toolkits; you can see several discussions on the
@@ -317,3 +473,4 @@ def startup():
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
