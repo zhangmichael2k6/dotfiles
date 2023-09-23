@@ -88,5 +88,5 @@
 **Thanks♪(･ω･)ﾉ for the config**
 
 #### Some screenshot
-![Imgur](https://i.imgur.com/yIx7neN.png)
+![Imgur](https://i.imgur.com/vEHY9RY.png)
 ![Imgur](https://i.imgur.com/IAuAojz.png)
