@@ -1,5 +1,5 @@
 # Dotfiles ヾ(≧▽≦*)o
-
+# PS : I'm switching to Windows for my convinience! Bye! 🥹🥹🥹
 ## Apps I use
 
 |       Usage        |  Appliction  |
