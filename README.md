@@ -1,11 +1,12 @@
 # Dotfiles ヾ(≧▽≦*)o
 # PS : I'm switching to Windows for my convinience! Bye! 🥹🥹🥹
+
 ## Apps I use
 
 |       Usage        |  Appliction  |
 |--------------------|--------------|
 |  OS                |  Arch        |
-|  DE                |  Xmonad      |
+|  DE                |  Qtile (Fuck Haskell 🖕🖕🖕)      |
 |  Screenshot        |  Flameshot   |
 |  Notification      |  Dunst       | 
 |  Code Editor       |  Neovim      | 
@@ -83,8 +84,9 @@
 
 #### Credits
 
-- Polybar, Xmonad: from Mr. [Derek Taylor](https://www.youtube.com/@DistroTube)</br>
+- Qtile: from Mr. [Derek Taylor](https://www.youtube.com/@DistroTube)</br>
 **Thanks♪(･ω･)ﾉ for the config**
 
 #### Some screenshot
-![screenshot-1](Pictures/Screenshots/1.png)
+![Imgur](https://i.imgur.com/yIx7neN.png)
+![1](https://i.imgur.com/vEHY9RY.png)
