@@ -89,4 +89,4 @@
 
 #### Some screenshot
 ![Imgur](https://i.imgur.com/yIx7neN.png)
-![1](https://i.imgur.com/vEHY9RY.png)
+![Imgur](https://i.imgur.com/IAuAojz.png)
