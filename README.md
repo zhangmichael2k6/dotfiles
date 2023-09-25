@@ -1,5 +1,6 @@
-# Dotfiles ヾ(≧▽≦*)o
-# PS : I'm switching to Windows for my convinience! Bye! 🥹🥹🥹
+# PS: I'm switching to Windows for my convinience! Bye! 🥹🥹🥹
+
+## Dotfiles ヾ(≧▽≦*)o
 
 ## Apps I use
 
@@ -15,23 +16,6 @@
 |  Terminal          |  kitty       |
 |  Status bar        |  polybar     |
 |  Night light       |  Redshift    |
-
-## The installer
-
-- In addition to install things easier for everyone, I created `install.sh` to easily install all the dependencies
-- To actually run the file: </br>
-
-  - Make the file executable by this command:  
-
-    ``` bash
-    chmod +x ./install.sh && ./install.sh
-    ```
-
-  - You can use curl to install without cloning the repo (Tested and it fucking work !!! 😁):  
-
-    ``` bash
-    curl -sS https://raw.githubusercontent.com/zhangmichael2k6/dotfiles/main/install.sh | sh
-    ```
 
 ## Few notes
 
