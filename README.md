@@ -61,7 +61,9 @@
 |  Ctrl + q  |  Launch rofi-power-menu  |
 
 > The Super + Return keybind might be default in some WM. You can delete it in `sxhkdrc` file
+
 > Hyprland have some weird-ass keybind. You might need to change it for your convenience
+
 > I had added a `install.config` file. That a package list for my Windows Chocolatey stuff. Just ignore that !
 
 #### Credits
