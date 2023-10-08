@@ -49,8 +49,6 @@
   bare checkout
   ```
   
-**THANK YOU FOR READING !!! ^o^**
-
 ### Some keybind that might be helpful ! (づ￣ 3￣)づ
 
 |  Keybind  |  Action  |
@@ -63,13 +61,14 @@
 |  Ctrl + q  |  Launch rofi-power-menu  |
 
 > The Super + Return keybind might be default in some WM. You can delete it in `sxhkdrc` file
-
 > Hyprland have some weird-ass keybind. You might need to change it for your convenience
+> I had added a `install.config` file. That a package list for my Windows Chocolatey stuff. Just ignore that !
 
 #### Credits
 
 - Qtile: from Mr. [Derek Taylor](https://www.youtube.com/@DistroTube)</br>
 **Thanks♪(･ω･)ﾉ for the config**
+**THANK YOU FOR READING !!! ^o^**
 
 #### Some screenshot
 
