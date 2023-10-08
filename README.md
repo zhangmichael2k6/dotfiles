@@ -11,7 +11,7 @@
 |  Screenshot        |  Flameshot   |
 |  Notification      |  Dunst       |
 |  Code Editor       |  Neovim      |
-|  App Launher       |  rofi        |
+|  App Launcher      |  rofi        |
 |  Shortcut manager  |  sxhkd       |
 |  Terminal          |  kitty       |
 |  Status bar        |  polybar     |
