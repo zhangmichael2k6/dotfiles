@@ -69,7 +69,7 @@
 #### Credits
 
 - Qtile: from Mr. [Derek Taylor](https://www.youtube.com/@DistroTube)</br>
-**Thanks♪(･ω･)ﾉ for the config**
+**Thanks♪(･ω･)ﾉ for the config** </br>
 **THANK YOU FOR READING !!! ^o^**
 
 #### Some screenshot
