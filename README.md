@@ -9,8 +9,8 @@
 |  OS                |  Arch        |
 |  DE                |  Qtile (Fuck Haskell 🖕🖕🖕)      |
 |  Screenshot        |  Flameshot   |
-|  Notification      |  Dunst       | 
-|  Code Editor       |  Neovim      | 
+|  Notification      |  Dunst       |
+|  Code Editor       |  Neovim      |
 |  App Launher       |  rofi        |
 |  Shortcut manager  |  sxhkd       |
 |  Terminal          |  kitty       |
@@ -48,7 +48,7 @@
   ``` bash
   bare checkout
   ```
-
+  
 **THANK YOU FOR READING !!! ^o^**
 
 ### Some keybind that might be helpful ! (づ￣ 3￣)づ
@@ -72,5 +72,6 @@
 **Thanks♪(･ω･)ﾉ for the config**
 
 #### Some screenshot
+
 ![Imgur](https://i.imgur.com/vEHY9RY.png)
 ![Imgur](https://i.imgur.com/IAuAojz.png)
