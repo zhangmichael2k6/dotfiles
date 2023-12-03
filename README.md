@@ -1,5 +1,3 @@
-# PS: I'm switching to Windows for my convinience! Bye! 🥹🥹🥹
-
 ## Dotfiles ヾ(≧▽≦*)o
 
 ## Apps I use
@@ -14,7 +12,6 @@
 |  App Launcher      |  rofi        |
 |  Shortcut manager  |  sxhkd       |
 |  Terminal          |  kitty       |
-|  Status bar        |  polybar     |
 |  Night light       |  Redshift    |
 
 ## Few notes
@@ -51,28 +48,18 @@
   
 ### Some keybind that might be helpful ! (づ￣ 3￣)づ
 
-|  Keybind  |  Action  |
-|  -------  |  ------  |
-|  Super + Return  |  Launch the terminal  |
-|  Super + Shift + e  |  Launch steam  |
-|  Super + v  |  Open pavucontrol aka Volume Control  |
-|  Ctrl + Shift + Space  |  Launch rofi  |
-|  Ctrl + .  |  Launch rofi-emoji  |
-|  Ctrl + q  |  Launch rofi-power-menu  |
-
-> The Super + Return keybind might be default in some WM. You can delete it in `sxhkdrc` file
-
-> Hyprland have some weird-ass keybind. You might need to change it for your convenience
-
-> I had added a `install.config` file. That a package list for my Windows Chocolatey stuff. Just ignore that !
+| Keybind                   | Action                              |
+|---------------------------|-------------------------------------|
+| Super + Return            | Launch the terminal                 |
+| Super + Shift + e         | Launch steam                        |
+| Super + v                 | Open pavucontrol aka Volume Control |
+| Ctrl + Shift + Space      | Launch rofi                         |
+| Ctrl + .                  | Launch rofi-emoji                   |
+| Ctrl + q                  | Launch rofi-power-menu              |
+| Ctrl + UpArrow, DownArrow | Volume Up, down                     | 
 
 #### Credits
 
 - Qtile: from Mr. [Derek Taylor](https://www.youtube.com/@DistroTube)</br>
 **Thanks♪(･ω･)ﾉ for the config** </br>
 **THANK YOU FOR READING !!! ^o^**
-
-#### Some screenshot
-
-![Imgur](https://i.imgur.com/vEHY9RY.png)
-![Imgur](https://i.imgur.com/IAuAojz.png)
