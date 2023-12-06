@@ -56,7 +56,7 @@
 | Ctrl + Shift + Space      | Launch rofi                         |
 | Ctrl + .                  | Launch rofi-emoji                   |
 | Ctrl + q                  | Launch rofi-power-menu              |
-| Ctrl + UpArrow, DownArrow | Volume Up, down                     | 
+| Ctrl + ⬆, ⬇️             | Volume Up, down                     | 
 
 #### Credits
 
