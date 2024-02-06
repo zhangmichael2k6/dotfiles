@@ -114,9 +114,7 @@ keys = [
 groups = []
 group_names = ["1", "2", "3", "4", "5", "6", "7", "8", "9",]
 
-#group_labels = ["DEV", "WWW", "SYS", "DOC", "VBOX", "CHAT", "MUS", "VID", "GFX",]
 group_labels = ["1", "2", "3", "4", "5", "6", "7", "8", "9",]
-#group_labels = ["", "", "", "", "", "", "", "", "",]
 
 
 group_layouts = ["monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall", "monadtall"]
@@ -331,7 +329,7 @@ def init_widgets_list():
                  partition = '/',
                  #format = '[{p}] {uf}{m} ({r:.0f}%)',
                  format = '{uf}{m} free',
-                 fmt = '🖴  Disk: {}',
+                 fmt = '📀 Disk: {}',
                  visible_on_warn = False,
                  decorations=[
                      BorderDecoration(
@@ -343,7 +341,7 @@ def init_widgets_list():
         widget.Spacer(length = 8),
         widget.PulseVolume(
                  foreground = colors[7],
-                 fmt = '🕫  Vol: {}',
+                 fmt = '📢 Vol: {}',
                  decorations=[
                      BorderDecoration(
                          colour = colors[7],
@@ -354,7 +352,7 @@ def init_widgets_list():
         widget.Spacer(length = 8),
         widget.KeyboardLayout(
                  foreground = colors[4],
-                 fmt = '⌨  Kbd: {}',
+                 fmt = '⌨ Kbd: {}',
                  decorations=[
                      BorderDecoration(
                          colour = colors[4],
@@ -365,7 +363,7 @@ def init_widgets_list():
         widget.Spacer(length = 8),
         widget.Clock(
                  foreground = colors[8],
-                 format = "⏱  %a, %b %d - %H:%M",
+                 format = "🕰  %a, %b %d - %H:%M",
                  decorations=[
                      BorderDecoration(
                          colour = colors[8],

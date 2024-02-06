@@ -2,7 +2,7 @@
 picom &
 nm-applet --indicator &
 fcitx &
-nitrogen --random --set-zoom-fill /usr/share/backgrounds/ &
+nitrogen --random --set-zoom-fill ~/.wallpaper&
 flameshot &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
