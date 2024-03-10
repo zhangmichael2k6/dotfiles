@@ -1,4 +1,3 @@
-4kvideodownloader
 adobe-source-han-sans-cn-fonts
 adobe-source-han-serif-cn-fonts
 alacritty
@@ -8,12 +7,9 @@ base-devel
 bat
 bdf-unifont
 brightnessctl
-caprine
 chromium
 clipman
 cmatrix
-conky
-discord
 dracula-cursors-git
 dracula-gtk-theme
 dunst
@@ -78,6 +74,7 @@ pipewire-jack
 pipewire-pulse
 polkit-gnome
 python-pip
+python-psutil
 python-pulsectl-asyncio
 python-pywayland
 python-pywlroots
@@ -99,22 +96,13 @@ smartmontools
 spotify-launcher
 starship
 steam
-sway-git
-swaybg
-swaylock-effects
 sxhkd
 telegram-desktop
 torbrowser-launcher
 trizen
 ttf-apple-emoji
-ttf-firacode-nerd
 ttf-font-awesome
-ttf-hack-nerd
 ttf-hannom
-ttf-jetbrains-mono
-ttf-jetbrains-mono-nerd
-ttf-mononoki-nerd
-ttf-nerd-fonts-symbols
 ttf-roboto
 ttf-ubuntu-font-family
 ttf-ubuntu-mono-nerd
@@ -129,8 +117,6 @@ waybar
 wget
 wireless_tools
 wireplumber
-wlogout
-wlsunset
 wofi
 wqy-bitmapfont
 wqy-microhei
