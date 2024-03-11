@@ -8,7 +8,8 @@ set -gx PF_COL2 9
 set -gx PF_COL3 1
 set -gx PF_ASCII Catppuccin
 
-fish_config theme choose "Dracula Official"
+# fish_config theme choose "Dracula Official"
+theme_gruvbox dark hard
 
 # Exa Alias (default suck my DICK!)
 alias ls 'eza -al --color=always --group-directories-first --icons' # preferred listing
