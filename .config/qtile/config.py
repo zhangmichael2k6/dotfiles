@@ -10,7 +10,7 @@ from qtile_extras.widget.decorations import BorderDecoration
 import colors
 
 mod = "mod4"              # Sets mod key to SUPER/WINDOWS
-myTerm = "kitty -e /usr/bin/fish"      # My terminal of choice
+myTerm = "kitty"      # My terminal of choice
 myBrowser = "firefox" # My browser of choice
 myEmacs = "emacsclient -c -a 'emacs' " # The space at the end is IMPORTANT!
 
@@ -193,8 +193,8 @@ layouts = [
     layout.Stack(**layout_theme, num_stacks=2),
     layout.Columns(**layout_theme),
     layout.TreeTab(
-         font = "Ubuntu Bold",
-         fontsize = 11,
+         font = "Pragmasevka Nerd Font Bold",
+         fontsize = 13,
          border_width = 0,
          bg_color = colors[0],
          active_bg = colors[8],
@@ -219,8 +219,8 @@ layouts = [
 # Some settings that I use on almost every widget, which saves us
 # from having to type these out for each individual widget.
 widget_defaults = dict(
-    font="Ubuntu Bold",
-    fontsize = 12,
+    font="Pragmasevka Nerd Font Bold",
+    fontsize = 15,
     padding = 0,
     background=colors[0]
 )
@@ -236,7 +236,7 @@ def init_widgets_list():
                  mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)},
                  ),
         widget.Prompt(
-                 font = "Ubuntu Mono",
+                 font = "Pragmasevka Nerd Font",
                  fontsize=14,
                  foreground = colors[1]
         ),
@@ -259,7 +259,7 @@ def init_widgets_list():
                  ),
         widget.TextBox(
                  text = '|',
-                 font = "Ubuntu Mono",
+                 font = "Pragmasevka Nerd Font",
                  foreground = colors[1],
                  padding = 2,
                  fontsize = 14
@@ -289,7 +289,7 @@ def init_widgets_list():
                  update_interval = 300,
                  func = lambda: subprocess.check_output("printf $(uname -r)", shell=True, text=True),
                  foreground = colors[3],
-                 fmt = '❤  {}',
+                 fmt = '🐧 {}',
                  decorations=[
                      BorderDecoration(
                          colour = colors[3],
@@ -299,7 +299,7 @@ def init_widgets_list():
                  ),
         widget.Spacer(length = 8),
         widget.CPU(
-                 format = '  Cpu: {load_percent}%',
+                 format = '🚀 Cpu: {load_percent}%',
                  foreground = colors[4],
                  decorations=[
                      BorderDecoration(
@@ -313,7 +313,7 @@ def init_widgets_list():
                  foreground = colors[8],
                  mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e htop')},
                  format = '{MemUsed: .0f}{mm}',
-                 fmt = '🖥  Mem: {} used',
+                 fmt = '💻 Mem: {} used',
                  decorations=[
                      BorderDecoration(
                          colour = colors[8],
@@ -350,20 +350,9 @@ def init_widgets_list():
                  ],
                  ),
         widget.Spacer(length = 8),
-        widget.KeyboardLayout(
-                 foreground = colors[4],
-                 fmt = '⌨ Kbd: {}',
-                 decorations=[
-                     BorderDecoration(
-                         colour = colors[4],
-                         border_width = [0, 0, 2, 0],
-                     )
-                 ],
-                 ),
-        widget.Spacer(length = 8),
         widget.Clock(
                  foreground = colors[8],
-                 format = "🕰  %a, %b %d - %H:%M",
+                 format = "🕛 %a, %b %d - %H:%M",
                  decorations=[
                      BorderDecoration(
                          colour = colors[8],
@@ -440,10 +429,6 @@ floating_layout = layout.Floating(
         Match(title='Confirmation'),      # tastyworks exit box
         Match(title='Qalculate!'),        # qalculate-gtk
         Match(title="pinentry"),          # GPG key password entry
-        Match(title="tastycharts"),       # tastytrade pop-out charts
-        Match(title="tastytrade"),        # tastytrade pop-out side gutter
-        Match(title="tastytrade - Portfolio Report"), # tastytrade pop-out allocation
-        Match(wm_class="tasty.javafx.launcher.LauncherFxApp"), # tastytrade settings
     ]
 )
 auto_fullscreen = True
