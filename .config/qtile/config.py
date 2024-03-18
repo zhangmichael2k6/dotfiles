@@ -219,8 +219,8 @@ layouts = [
 # Some settings that I use on almost every widget, which saves us
 # from having to type these out for each individual widget.
 widget_defaults = dict(
-    font="Pragmasevka Nerd Font Bold",
-    fontsize = 15,
+    font="Ubuntu Bold",
+    fontsize = 11,
     padding = 0,
     background=colors[0]
 )
@@ -236,8 +236,8 @@ def init_widgets_list():
                  mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn(myTerm)},
                  ),
         widget.Prompt(
-                 font = "Pragmasevka Nerd Font",
-                 fontsize=14,
+                 font = "Ubuntu Bold",
+                 fontsize=11,
                  foreground = colors[1]
         ),
         widget.GroupBox(
@@ -259,10 +259,10 @@ def init_widgets_list():
                  ),
         widget.TextBox(
                  text = '|',
-                 font = "Pragmasevka Nerd Font",
+                 font = "Ubuntu Bold",
                  foreground = colors[1],
                  padding = 2,
-                 fontsize = 14
+                 fontsize = 11
                  ),
         widget.CurrentLayoutIcon(
                  # custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
